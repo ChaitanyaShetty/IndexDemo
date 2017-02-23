@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UILabel *Lb;
+- (IBAction)buttonClicked:(id)sender;
 
 @end
 

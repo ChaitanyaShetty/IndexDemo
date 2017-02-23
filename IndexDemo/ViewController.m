@@ -9,6 +9,10 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+{
+    NSArray *value;
+    int i;
+}
 
 @end
 
@@ -17,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    value = [[NSArray alloc] initWithObjects:@"a", @"b", @"c", @"d", nil];
+     i=-1;
+    
 }
 
 
@@ -26,4 +33,22 @@
 }
 
 
+- (IBAction)buttonClicked:(id)sender {
+    
+//    if (i == [value count]) {
+//        i = 0;
+//    }
+//    self.Lb.text = [value objectAtIndex:i];
+//    i++;
+    
+   
+    //back button
+    
+    if (i < 0) {
+        i = (int)[value count];
+        i--;
+    }
+    self.Lb.text = [value objectAtIndex:i];
+    i--;
+}
 @end
